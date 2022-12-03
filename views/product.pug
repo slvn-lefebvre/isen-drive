@@ -1,0 +1,13 @@
+extends layout
+
+block content
+    div
+        div
+            span
+                b Nom:
+                span  #{product.name}
+        div
+            b Catégorie
+            a.item-title(href="/category/" + category._id) #{category.name}
+        div Prix:  #{product.price} €
+
