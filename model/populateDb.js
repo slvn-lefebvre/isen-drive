@@ -6,7 +6,6 @@ const dbName = args[1] ?? "isen_drive";
 
 
 const { MongoClient, ServerApiVersion } = require('mongodb');
-//onst uri = "mongodb+srv://admin:U8socoj_@cluster0.cf8zodz.mongodb.net/?retryWrites=true&w=majority";
 const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true, serverApi: ServerApiVersion.v1 });
 
 
