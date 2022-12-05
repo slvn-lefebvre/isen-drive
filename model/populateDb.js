@@ -1,11 +1,13 @@
 //const { MongoClient } = require('mongodb');
 require('dotenv').config()
 
-
-const args = process.argv.slice(2);
-const uri = process.env.MONGODB_URI_PREFIX + process.env.DB_USER + ":" + process.env.DB_PASS + (args[0] ?? process.env.MONGODB_URI);
-const dbName = args[1] ?? process.env.DB_NAME;
-
+const uri =
+    process.env.MONGODB_URI_PREFIX +
+    process.env.DB_USER +
+    ":" +
+    process.env.DB_PASS +
+    process.env.MONGODB_URI;
+const dbName = process.env.DB_NAME;
 
 const { MongoClient, ServerApiVersion } = require('mongodb');
 const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true, serverApi: ServerApiVersion.v1 });
