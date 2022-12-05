@@ -1,5 +1,8 @@
 //const { MongoClient } = require('mongodb');
 require('dotenv').config()
+import { TextEncoder, TextDecoder } from 'util';
+global.TextEncoder = TextEncoder;
+global.TextDecoder = TextDecoder;
 
 const uri =
     process.env.MONGODB_URI_PREFIX +
