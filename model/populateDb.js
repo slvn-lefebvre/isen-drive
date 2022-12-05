@@ -1,8 +1,10 @@
 //const { MongoClient } = require('mongodb');
+require('dotenv').config()
+
 
 const args = process.argv.slice(2);
-const uri = args[0] ?? 'mongodb://localhost:27017';
-const dbName = args[1] ?? "isen_drive";
+const uri = process.env.MONGODB_URI_PREFIX + process.env.DB_USER + ":" + process.env.DB_PASS + (args[0] ?? process.env.MONGODB_URI);
+const dbName = args[1] ?? process.env.DB_NAME;
 
 
 const { MongoClient, ServerApiVersion } = require('mongodb');
