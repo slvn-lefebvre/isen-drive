@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Mini-site de gestion du catalogue d'un drive",
   "main": "app.js",
+  "engines": { "node": "16.6.1"  },
   "scripts": {
     "prestart": "node model/populateDb.js",
     "start": "node app.js",
